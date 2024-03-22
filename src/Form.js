@@ -2,7 +2,7 @@ import Button from "./Button"
 const Form = ({ reqType, setReqType }) => {
   return (
     <div>
-      <form onSubmit={(e) => e.preventDefault()}></form>
+      <form onSubmit={(e) => e.preventDefault()}>
       <Button
       buttonText="users"
       reqType={reqType}
@@ -18,6 +18,7 @@ const Form = ({ reqType, setReqType }) => {
       reqType={reqType}
       setReqType={setReqType}
       />
+      </form>
     </div>
   )
 }

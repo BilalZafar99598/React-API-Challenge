@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Form from "./Form";
+import List from "./List";
 
 const App = () => {
   const API_URL = 'https://jsonplaceholder.typicode.com';
@@ -10,6 +11,7 @@ const App = () => {
   const fetchItems = async () => {
     const response = await fetch(`${API_URL}/${reqType}`);
     const data = await response.json();
+    console.log(data);
     setItems(data);
   }
 
@@ -22,6 +24,9 @@ const App = () => {
         <Form
         reqType={reqType}
         setReqType={setReqType}
+        />
+        <List
+        items={items}
         />
     </div>
   )
