@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Form from "./Form";
 import List from "./List";
+import Table from "./Table";
 
 const App = () => {
   const API_URL = 'https://jsonplaceholder.typicode.com';
@@ -25,9 +26,10 @@ const App = () => {
         reqType={reqType}
         setReqType={setReqType}
         />
-        <List
+        <Table items={items}/>
+        {/* <List
         items={items}
-        />
+        /> */}
     </div>
   )
 }
